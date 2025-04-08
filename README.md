@@ -12,7 +12,7 @@ This project is designed to analyse the retail_sales by using  SQL skills at beg
 4. **Buisiness Insights** : perform some buisness type queries and derive insights from the data
 # project structure
 ### 1.Database setup
-**Data base creation** : create a database like 'p1_retail_db'
+**Data base creation** : create a database like 'p1_retail_db'.
 **creating table** : The table is created with the name of 'retail_sales' .The table contain these columns: transactions_id,	sale_date,	sale_time,	customer_id,	gender,	age,	category,	quantiy	, price_per_unit, (cost of goods of sold)	cogs,	total_sale.
 
 
@@ -47,54 +47,54 @@ where
 	 quantiy is null or  price_per_unit is null orcogs is null or total_sale is null
   '''
   ###3.Data Analysis,EDA and Buisiness Findings
-  **How many sales we have??**
+  **How many sales we have??**:
   '''select count(*) as no_of_sales from retail_sales;
   '''
-  **How many unique customers we have?**
+  **How many unique customers we have?**:
   '''select count(distinct customer_id) from retail_sales;
   '''
-  **How many categories we have?**
+  **How many categories we have?**:
   '''select category from retail_sales
      group by category;
   '''
-  **Find out how much revenue each product category generates.**
+  **Find out how much revenue each product category generates.**:
   '''select*from retail_sales
      select category, sum(total_sale) as total_revenue from retail_sales
      group by category
      order by  count(total_sale) desc;
   '''
-  **Find the top 10 customers who made the most purchases.**
+  **Find the top 10 customers who made the most purchases.**:
   '''select customer_id, count(*) as purchase_count from retail_sales
      group by customer_id
      order by  count(*) desc
      limit 10;
  '''
- **Find the total revenue generated.**
+ **Find the total revenue generated.**:
 
 '''select sum(total_sale) as total_revenue from retail_sales;
 '''
-**Find which product categories generate the most profit.**
+**Find which product categories generate the most profit.**:
 '''select category, sum(total_sale) from retail_sales
    group by category
    order by sum(total_sale) desc
    limit 1;
 '''
-**Find the average amount customers spend per transaction.**
+**Find the average amount customers spend per transaction.**:
 '''select transactions_id, avg(total_sale) from retail_sales
    group by transactions_id;
 '''
-**Find daily sales trends**
+**Find daily sales trends**:
 '''select sale_date, sum(total_sale) as daily_sles from retail_sales
    group by sale_date
    order by  sum(total_sale);
 '''
-**Find how many customers are repeat buyers.**
+**Find how many customers are repeat buyers.**:
 '''select customer_id, count(customer_id) as purchase_count from retail_sales
   group by customer_id
   having count(customer_id)>1
   order by customer_id;
 '''
-**Find Which Day Has the Most Sales**
+**Find Which Day Has the Most Sales**:
 '''select sale_date,sum(total_sale) as most_sales,
    to_char(sale_date,'day') as day
    from retail_sales
@@ -102,52 +102,52 @@ where
   order by sum(total_sale) desc
   limit 1;
 '''
-**Find Products That Were Never Sold**
+**Find Products That Were Never Sold**:
 '''SELECT category FROM retail_sales WHERE quantiy = 0;
 '''
-**Write a SQL Query to find the Top 5 Days with Highest Total Sales**
+**Write a SQL Query to find the Top 5 Days with Highest Total Sales**:
 
 '''select sale_date,sum(total_sale) from retail_sales
    group by sale_date
    order by sum(total_sale) desc
   limit 5;
 '''
-**Write a SQL Query to find out Category-wise Average sales**
+**Write a SQL Query to find out Category-wise Average sales**:
 '''select category, avg(total_sale) as avg_sale from retail_sales
    group by category
    select*from retail_sales
 '''
-**Write SQL Query for Which gender shops more in each product category?**
+**Write SQL Query for Which gender shops more in each product category?**:
 '''select category ,gender,count(*) from retail_sales
   group by category,gender
   order by category,count(*)
 '''
-**Write SQL query to find out top 5 customers based on the sales**
+**Write SQL query to find out top 5 customers based on the sales**:
 '''select customer_id,sum(total_sale) from retail_sales
    group by customer_id
    order by sum(total_sale) desc
    limit 5;
 '''
-**Write SQL Query to calculate number of customers purchased in each category**
+**Write SQL Query to calculate number of customers purchased in each category**:
 '''select category, count(customer_id) from retail_sales
 group by category;
 '''
-**Write SQL Query to calculate number of transactions in each gender**
+**Write SQL Query to calculate number of transactions in each gender**:
 '''select count(transactions_id),gender from retail_sales
 group by gender;
 '''
-**Write SQL Query to calculate highest sale of the year**
+**Write SQL Query to calculate highest sale of the year**:
 '''select extract(year from sale_date) ,sum(total_sale) from retail_sales
    group by extract(year from sale_date)
    order by sum(total_sale) desc
    limit 1;
 '''
-**Write SQL Query to calculate In which category has the highest cogs**
+**Write SQL Query to calculate In which category has the highest cogs**:
 '''select category, sum(cogs) as highest_cogs from retail_sales
    group by category
    limit 1;
 '''
-## Findings of the Retail Sales Analysis Project
+## Findings of the Retail Sales Analysis Project:
 The analysis of this project dataset revealed several key insights into customer behavior, product performance, and overall business health. A clear sales trend was observed across different hours of the day, with peak sales occurring during late afternoon hours, suggesting optimal times for promotions and staffing. Among the various product categories, a few stood out by generating the highest revenue, while others had a higher frequency of purchases but lower overall earnings, highlighting potential areas for pricing or marketing improvements.These findings can help the business  strategy, improve targeted marketing efforts, and optimize operations for greater profitability.
 
 ## Conclusion
