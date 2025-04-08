@@ -1,9 +1,9 @@
 # sql_project1_retail_sales:
 
 ##project overview:
-1.**project Tilte** : Retail Sales Analysis.
-2.**Level** : Begginer.
-3.**Database** : 'p1_retail_db' .
+1. **project Tilte** : Retail Sales Analysis.
+2. **Level** : Begginer.
+3. **Database** : 'p1_retail_db' .
 This project is designed to analyse the retail_sales by using  SQL skills at begginer level.This project invovles setting up the retail_sale database , performing data cleaning,explarotary data analysis and answering business questions through SQL queries.
 
 ##objectives
