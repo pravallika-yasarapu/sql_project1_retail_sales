@@ -1,13 +1,14 @@
-# sql_project1_retail_sales
-##project overview
-**project Tilte** : Retail Sales Analysis
-**Level** : Begginer
-**Database** : 'p1_retail_db' 
+# sql_project1_retail_sales:
+
+##project overview:
+**project Tilte** : Retail Sales Analysis.
+**Level** : Begginer.
+**Database** : 'p1_retail_db' .
 This project is designed to analyse the retail_sales by using  SQL skills at begginer level.This project invovles setting up the retail_sale database , performing data cleaning,explarotary data analysis and answering business questions through SQL queries.
 
 ##objectives
 1. **Set up data base** : create database of your project
-2. **Data Cleaning ** : identify and remove null values,missing values in your sales data
+2. **Data Cleaning** : identify and remove null values,missing values in your sales data
 3. **Exploratory Data Analysis** : perform basic exploratory analasis to understand the data
 4. **Buisiness Insights** : perform some buisness type queries and derive insights from the data
 # project structure
