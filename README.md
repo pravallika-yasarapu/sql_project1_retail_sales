@@ -17,7 +17,8 @@ This project is designed to analyse the retail_sales by using  SQL skills at beg
 **creating table** : The table is created with the name of 'retail_sales' .The table contain these columns: transactions_id,	sale_date,	sale_time,	customer_id,	gender,	age,	category,	quantiy	, price_per_unit, (cost of goods of sold)	cogs,	total_sale.
 
 
-'''create table retail_sales
+'''sql
+create table retail_sales
       (transactions_id int, 
 	  sale_date	date,
 	  sale_time	time,
@@ -34,7 +35,7 @@ This project is designed to analyse the retail_sales by using  SQL skills at beg
 ###2.Data Cleaning
 **cleaning** : In Data cleaning process , we need to find out missing values or null values and remove those null values from our data
 ##identifying null_values
-'''
+'''sql
 select* from retail_sales
 where  
      transactions_id is null or sale_date is null or sale_time is null or customer_id is null or gender is null or category is null or
